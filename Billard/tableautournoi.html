@@ -27,83 +27,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/tableau.css" rel="stylesheet">
 
 </head>
 
-<style>
-  body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-     
-      margin: 0; /* Supprime les marges du body */
-  }
-  h1 {
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 50px;
-  }
-  .bracket-container {
-      display: flex;
-      align-items: center;
-      margin-top: 50px; /* Ajoute une marge supérieure pour abaisser la bracket-container */
-  }
-  .bracket, .bracket1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 0 10px; /* Réduit les marges sur les côtés */
-  }
-  .bracket1 {
-      flex-direction: row-reverse; /* Sens contraire pour bracket1 */
-  }
-  .round {
-      display: flex;
-      flex-direction: column;
-      margin: 0 10px; /* Réduit les marges sur les côtés */
-  }
-  .match, select {
-      width: 120px; /* Réduit la largeur des cases */
-      height: 40px; /* Réduit la hauteur des cases */
-      background: white;
-      border: 2px solid black;
-      margin: 18px 5px; /* Réduit les marges en haut et en bas */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      color: black;
-  }
-  .vertical-line {
-      width: 2px;
-      height: 100%;
-      background: black;
-      margin: 0 20px; /* Espace entre les deux brackets */
-  }
-  .vs {
-      color: black;
-      font-size: 100px;
-      font-weight: bold;
-      margin: 0 100px; /* Espace autour du texte VS */
-  }
-  .save-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  .save-button:hover {
-      background-color: #0056b3;
-  }
-</style>
+ 
 
 <body>
 
@@ -163,7 +91,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-center align-items-center">
-          <h2>Tableau du tournoi</h2>
+          <h2 style="color: black;">Tableau du tournoi</h2>
           
         </div>
 

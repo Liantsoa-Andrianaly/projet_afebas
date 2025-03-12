@@ -322,6 +322,8 @@ button:hover {
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
+  height: 300px;
+  
 }
 .navbar-mobile a, .navbar-mobile a:focus {
   padding: 10px 20px;
@@ -521,7 +523,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background:#65534c ;
+ 
   min-height: 40px;
 }
 .breadcrumbs h2 {
