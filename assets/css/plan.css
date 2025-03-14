@@ -1,0 +1,147 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#breadcrumbs {
+  background-image: url('../img/image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 115px;
+  color: #fff;
+}
+
+.billiard-room {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  margin-top: 0;
+}
+
+.table {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.table img {
+  width: 200px;
+  height: 150px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+  transform-style: preserve-3d;
+  opacity: 0.8;
+}
+
+.table img:hover {
+  transform: rotateY(20deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.table p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#footer {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+#footer .copyright {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#footer .social-links a {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+#footer .social-links a:hover {
+  color: #27ae60;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .billiard-room {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .billiard-room {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .billiard-room {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .billiard-room {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Masquer le menu de navigation par défaut sur les petits écrans */
+@media (max-width: 991px) {
+  #navbar ul {
+    display: none;
+  }
+
+  /* Afficher le bouton burger */
+  .mobile-nav-toggle {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Afficher le menu de navigation lorsque le bouton burger est cliqué */
+  #navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    padding: 15px;
+    z-index: 999;
+  }
+
+  #navbar.active li {
+    margin: 10px 0;
+  }
+}
+
+/* Afficher le menu de navigation sur les grands écrans */
+@media (min-width: 992px) {
+  #navbar ul {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
+}

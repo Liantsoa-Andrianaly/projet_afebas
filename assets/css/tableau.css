@@ -1,0 +1,124 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0; /* Supprime les marges du body */
+    background-image: url('../img/ball.jpg');
+}
+html, body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    width: 100vw; /* S'assure que le body ne dépasse pas la largeur de l'écran */
+    
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.bracket-container {
+    display: flex;
+    justify-content: space-between; /* Aligne les brackets de chaque côté */
+    align-items: center;
+    flex-wrap: nowrap; /* Empêche les éléments de passer sur plusieurs lignes */
+    width: 100%;
+    margin-top: 50px; 
+    max-width: 100%; /* Empêche que les éléments dépassent horizontalement */
+    overflow-x: hidden;
+}
+.bracket, .bracket1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Réduit les marges sur les côtés */
+}
+.bracket1 {
+    flex-direction: row-reverse; /* Sens contraire pour bracket1 */
+}
+.round {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px; /* Réduit les marges sur les côtés */
+}
+.match, select {
+    width: 120px; /* Réduit la largeur des cases */
+    height: 40px; /* Réduit la hauteur des cases */
+    background: white;
+    border: 2px solid black;
+    margin: 18px 5px; /* Réduit les marges en haut et en bas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    background: black;
+    margin: 0 20px; /* Espace entre les deux brackets */
+}
+.vs {
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0 auto; /* Espace autour du texte VS */
+}
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.save-button:hover {
+    background-color: #0056b3;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+   
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .bracket-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .vs {
+        font-size: 80px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .match, select {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .vs {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match, select {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .vs {
+        font-size: 40px;
+    }
+}
